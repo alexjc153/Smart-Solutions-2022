@@ -1,0 +1,91 @@
+.benefits-section {
+  background-color: var(--active-and-hover-color);
+  color: white;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+}
+
+.benefits-section--title {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.benefits-section--title h2 {
+  font-size: calc(1.2rem + 1vw);
+  font-weight: 400;
+}
+
+.benefits-section--title p {
+  padding-top: 20px;
+  font-size: calc(0.8rem + 0.5vw);
+  font-weight: 300;
+}
+
+.benefits--cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-details {
+  text-align: center;
+  width: 100%;
+  min-width: 276px;
+  max-width: 300px;
+  height: 270px;
+  margin: 15px 15px;
+  padding: 15px;
+  background-color: #f5f8fa;
+  color: #181c32;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+.card-details .icon-card {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 15px;
+  background-size: cover;
+}
+
+.card-details .certified {
+  background-image: url("./../../../../assets/img/sections/benefits/certificado.png");
+}
+
+.card-details .sent {
+  background-image: url("./../../../../assets/img/sections/benefits/envio.png");
+}
+
+.card-details .invoice {
+  background-image: url("./../../../../assets/img/sections/benefits/boletas.png");
+}
+
+.card-details .consult {
+  background-image: url("./../../../../assets/img/sections/benefits/consulta.png");
+}
+
+.card-details .kardex {
+  background-image: url("./../../../../assets/img/sections/benefits/kardex.png");
+}
+
+.card-details .email {
+  background-image: url("./../../../../assets/img/sections/benefits/email.png");
+}
+
+.card-details--title {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-details--description {
+  text-align: justify;
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+}

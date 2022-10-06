@@ -1,0 +1,136 @@
+.plans-section {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.plans-section--title {
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.plans-section--title h2 {
+  padding-top: 30px;
+  font-size: calc(1.2rem + 1vw);
+  font-weight: 400;
+}
+
+.plans-section--title p {
+  padding-top: 10px;
+  font-size: calc(0.8rem + 0.5vw);
+  font-weight: 300;
+}
+
+.plans-container--slider {
+  display: flex;
+  height: 500px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.plans-container--card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 80%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 450px;
+  margin: 30px 5px 0;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recommended {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 500;
+  width: 120px;
+  height: 31px;
+  top: -15px;
+  left: calc(50% - 60px);
+  padding: 6px;
+  background-color: var(--active-and-hover-color);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.plan-card--title {
+  padding-top: 40px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 0.5rem;
+  color: #1a3fb2;
+}
+
+.plan-card--price {
+  position: relative;
+  padding: 5px 0;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-top: 15px;
+}
+
+.plan-card--price .symbol {
+  position: absolute;
+  left: calc(50% - 65px);
+  top: -10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.plan-card--price .decimals {
+  position: absolute;
+  left: calc(50% + 31px);
+  top: -6px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.plan-card--price .month {
+  font-size: 0.8rem;
+  font-weight: 300;
+  position: absolute;
+  top: 14px;
+}
+
+.plan-card--list {
+  list-style: none;
+  height: 245px;
+  text-align: left;
+}
+
+.plan-card--list-item {
+  position: relative;
+}
+.plan-card--list-item i {
+  position: absolute;
+  font-size: 1rem;
+  top: 4px;
+  left: -25px;
+  color: var(--active-and-hover-color);
+}
+
+.plan-card--list-item span {
+  font-size: calc(0.8rem + 0.09vw);
+  font-weight: 300;
+}
+
+.plan-card--button {
+  background-color: var(--active-and-hover-color);
+  border: 1px solid var(--active-and-hover-color);
+  font-size: calc(0.8rem + 0.2vw);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  .plans-container--slider {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+}

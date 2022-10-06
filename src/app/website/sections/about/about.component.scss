@@ -1,0 +1,30 @@
+.about-section {
+  background-color: #fff;
+}
+
+.about-section .title, .description {
+  text-align: center;
+}
+
+.about-section .title {
+  padding-top: 1rem;
+  font-size: calc(1.2rem + 1vw);
+  font-weight: 400;
+}
+
+.about-section .description {
+  padding-top: 1rem;
+  font-size: calc(0.8rem + 0.5vw);
+  font-weight: 300;
+}
+
+.about-content .background-sunat {
+  min-width: 296px;
+  width: 296px;
+  height: 85px;
+  margin: 0 auto;
+  background-image: url("./../../../../assets/img/sections/about/sunat.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

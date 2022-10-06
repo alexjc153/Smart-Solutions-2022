@@ -1,0 +1,256 @@
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact--title" data-aos="zoom-in-up">
+      <h2>Contáctanos</h2>
+      <p>Puedes ponerte en contacto con nosotros</p>
+    </div>
+    <div class="contact--options">
+      <div class="contact--form">
+        <form
+          class="form-container"
+          (ngSubmit)="sendMessage()"
+          method="POST"
+          [formGroup]="form"
+          autocomplete="off"
+        >
+          <div class="item-group">
+            <label for="ruc" class="form-label">RUC *</label>
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-address-card"></i
+              ></span>
+
+              <input
+                name="ruc"
+                formControlName="ruc"
+                class="form-control form-control-solid rounded-1"
+                [class.is-valid]="isRucValid"
+                [class.is-invalid]="isRucInvalid"
+                type="text"
+                autocomplete="off"
+                placeholder="ej. 20601234567"
+                maxlength="11"
+              />
+              <div
+                *ngIf="rucField!.hasError('required')"
+                class="invalid-feedback"
+              >
+                Este campo es requerido
+              </div>
+              <div
+                *ngIf="rucField!.hasError('pattern')"
+                class="invalid-feedback"
+              >
+                Solo se aceptan números
+              </div>
+              <div
+                *ngIf="rucField!.hasError('minlength')"
+                class="invalid-feedback"
+              >
+                El campo debe tener 11 dígitos
+              </div>
+              <div
+                *ngIf="rucField!.hasError('maxlength')"
+                class="invalid-feedback"
+              >
+                El campo debe tener 11 dígitos
+              </div>
+            </div>
+          </div>
+          <div class="item-group">
+            <label for="fullname" class="form-label"
+              >Nombre Completo / Persona de Contacto *</label
+            >
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-user"></i
+              ></span>
+              <input
+                name="fullname"
+                formControlName="fullname"
+                class="form-control form-control-solid rounded-1"
+                [class.is-valid]="isFullNameValid"
+                [class.is-invalid]="isFullNameInvalid"
+                type="text"
+                autocomplete="off"
+                placeholder="ej. Juan Pérez"
+              />
+              <div
+                *ngIf="fullnameField!.hasError('required')"
+                class="invalid-feedback"
+              >
+                Este campo es requerido
+              </div>
+            </div>
+          </div>
+
+          <div class="item-group">
+            <label for="email" class="form-label">Correo Electrónico *</label>
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-at"></i
+              ></span>
+              <input
+                name="email"
+                formControlName="email"
+                class="form-control form-control-solid rounded-1"
+                [class.is-valid]="isEmailValid"
+                [class.is-invalid]="isEmailInvalid"
+                type="email"
+                autocomplete
+                placeholder="ej. email@email.com"
+              />
+
+              <div
+                *ngIf="emailField!.hasError('required')"
+                class="invalid-feedback"
+              >
+                Este campo es requerido
+              </div>
+              <div
+                *ngIf="emailField!.hasError('pattern')"
+                class="invalid-feedback"
+              >
+                Debe ingresar un email válido
+              </div>
+            </div>
+          </div>
+          <div class="item-group">
+            <label for="phone" class="form-label">Teléfono *</label>
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-mobile-screen"></i
+              ></span>
+              <input
+                name="phone"
+                formControlName="phone"
+                class="form-control form-control-solid rounded-1"
+                [class.is-valid]="isPhoneValid"
+                [class.is-invalid]="isPhoneInvalid"
+                type="text"
+                autocomplete
+                placeholder="ej. 955444333"
+              />
+              <div *ngIf="isPhoneInvalid" class="invalid-feedback">
+                Este campo es requerido
+              </div>
+            </div>
+          </div>
+          <div class="item-group">
+            <label for="subject" class="form-label">Asunto *</label>
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-newspaper"></i
+              ></span>
+
+              <input
+                name="subject"
+                formControlName="subject"
+                class="form-control form-control-solid rounded-1"
+                [class.is-valid]="isSubjectValid"
+                [class.is-invalid]="isSubjectInvalid"
+                type="text"
+                autocomplete
+                placeholder="ej. Solicito Cotización"
+              />
+              <div
+                *ngIf="subjectField!.hasError('required')"
+                class="invalid-feedback"
+              >
+                Este campo es requerido
+              </div>
+            </div>
+          </div>
+          <div class="item-group">
+            <label for="message" class="form-label">Mensaje *</label>
+            <div class="input-group">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-envelope-open-text"></i
+              ></span>
+
+              <textarea
+                name="message"
+                formControlName="message"
+                class="form-control form-control-solid rounded-1"
+                [class.is-valid]="isMessageValid"
+                [class.is-invalid]="isMessageInvalid"
+                type="text-area"
+                autocomplete="off"
+              >
+              </textarea>
+
+              <div
+                *ngIf="messageField!.hasError('required')"
+                class="invalid-feedback"
+              >
+                Este campo es requerido
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button
+              [disabled]="form.invalid || isSending"
+              class="btn btn-primary btn-sent"
+              type="submit"
+            >
+              <span *ngIf="!isSending">{{ buttonText }}</span>
+              <span
+                *ngIf="isSending"
+                class="spinner-border spinner-border-sm"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              <!-- <app-spinner *ngIf="isSending"></app-spinner> -->
+              <!-- <span class="visually-hidden">Cargando...</span> -->
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="contact--info">
+        <p class="mb-3">
+          <i class="fa-solid fa-envelope"></i>
+          <span>ventas@jsmartsol.com</span>
+        </p>
+        <p class="mb-3">
+          <i class="fa-solid fa-globe"></i>
+          <span>www.jsmartsol.com</span>
+        </p>
+        <p class="mb-3">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>
+            <a href="https://wa.link/mvmegt" target="_blank">967 301 305</a> /
+            <a href="https://wa.link/v59b9c" target="_blank">903 376 896</a> /
+            <a href="https://wa.link/g7z028" target="_blank">942 029 048</a></span
+          >
+        </p>
+        <p class="mb-3">
+          <i class="fa-solid fa-clock"></i>
+          <span>9:00 AM - 6:00 PM</span>
+        </p>
+        <p class="mb-3">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Jr. Sinchi Roca 511, Segundo Piso, Tarapoto</span>
+        </p>
+        <div class="contact--networking">
+          <ul class="nav">
+            <li class="nav-item">
+              <a target="_blank" href="https://www.facebook.com/jsmartsol" target="_blank" class="nav-link"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/jjsmartsolutions" target="_blank" class="nav-link"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://wa.link/mvmegt" target="_blank" class="nav-link"
+                ><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

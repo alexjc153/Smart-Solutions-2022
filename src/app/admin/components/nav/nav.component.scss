@@ -1,0 +1,42 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px dashed #e5e5e5;
+}
+
+.logo-container .logo {
+  display: flex;
+  width: 250px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container .logo img {
+  height: 50px;
+}
+
+.sidebar {
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+
+.sidebar-wrapper {
+  height: calc(100vh - 70px);
+  overflow-y: hidden;
+}
+
+.sidebar-link-collapse {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-link-collapse .right-icon {
+  display: inline-flex;
+  transition: all ease 0.3s;
+}
+
+.sidebar-link-collapse[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}

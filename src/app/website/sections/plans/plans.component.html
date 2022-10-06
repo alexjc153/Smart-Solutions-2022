@@ -1,0 +1,24 @@
+<section id="plans" class="plans-section">
+  <div class="container">
+    <div class="plans-section--title">
+      <h2>Planes</h2>
+      <p>Elige el plan que más se ajuste a ti</p>
+    </div>
+    <div id="plans-slider" class="plans-container--slider">
+      <div class="plans-container--card" *ngFor="let plan of plans">
+        <span *ngIf="plan.recommended" class="recommended">Recomendado</span>
+        <h3 class="plan-card--title">{{ plan.name }}</h3>
+        <p class="plan-card--price"><span class="symbol"> S/ </span> {{ plan.price }} <span class="month">/ mes</span></p>
+        <ul class="plan-card--list" >
+          <li class="plan-card--list-item" *ngFor="let benefit of plan.benefits">
+            <i class="fa-solid fa-circle-check"></i>
+            <span class="list-item-detail"
+              >{{ benefit }}</span
+            >
+          </li>
+        </ul>
+        <a class="btn btn-primary plan-card--button" target="_blank" href="https://wa.link/v59b9c">Más información</a>
+      </div>
+    </div>
+  </div>
+</section>

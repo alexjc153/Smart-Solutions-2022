@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --menu-items-font-size: 15px;
+  --menu-items-color: #5e6278;
+  --text-marked-color: #2b9eb6;
+  --background-hover-color: #f4f6fa;
+  --active-and-hover-color: #009ef7;
+  --button-hover-color: #1a3fb2;
+}
+
+body {
+  background-color: #f5f8fa;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #181c32;
+  padding-right: 0px !important;
+}
+
+section {
+  padding-bottom: 2.5rem;
+  scroll-margin-top: 70px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--active-and-hover-color) !important;
+}
+
+// .dropdown-item:hover {
+//   background-color: var(--button-hover-color);
+//   color: var(--button-hover-color) !important;
+// }
+
+.swal2-styled.swal2-confirm {
+  background-color: #009ef7 !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 3px rgb(49 132 253 / 50%) !important;
+}
+
+// Animation SlideIn
+.animate {
+  animation-duration: 0.3s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+.slideIn {
+  animation-name: slideIn;
+}
+
+@media screen and (min-width: 991px) {
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0px 0px 50px 0px rgb(82 63 105 / 15%);
+  }
+}

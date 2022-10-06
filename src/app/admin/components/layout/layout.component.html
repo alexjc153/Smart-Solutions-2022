@@ -1,0 +1,19 @@
+<app-sidenav
+  class="admin--nav"
+  (onToggleSideNav)="onToggleSideNav($event)"
+></app-sidenav>
+<app-header
+  [collapsed]="isSideNavCollapsed"
+  [screenWidth]="screenWidth"
+></app-header>
+<app-body
+  [collapsed]="isSideNavCollapsed"
+  [screenWidth]="screenWidth"
+></app-body>
+<!-- <div class="admin">
+  <app-header class="admin--header"></app-header>
+  <app-admin-nav class="admin--nav"></app-admin-nav>
+  <div class="admin--main">
+    <router-outlet></router-outlet>
+  </div>
+</div> -->

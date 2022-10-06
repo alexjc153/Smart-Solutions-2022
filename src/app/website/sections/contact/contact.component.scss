@@ -1,0 +1,117 @@
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+}
+
+::placeholder {
+  color: rgba(24, 28, 50, 0.5);
+}
+
+.invalid-feedback {
+  margin-left: 50px;
+}
+
+.contact-section {
+  background-color: #fff;
+  min-width: 320px;
+  padding-bottom: 70px;
+}
+
+.contact--title {
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact--title h2 {
+  padding-top: 30px;
+  font-size: calc(1.2rem + 1vw);
+  font-weight: 400;
+}
+
+.contact--title p {
+  padding-top: 10px;
+  font-size: calc(0.8rem + 0.5vw);
+  font-weight: 300;
+}
+
+.contact--options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contact--form {
+  padding: 5px 10px;
+  width: 450px;
+  min-width: 280px;
+}
+
+form .form-label {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+form .item-group {
+  margin-bottom: 0.5rem;
+}
+
+form .input-group-text {
+  background-color: var(--active-and-hover-color);
+  width: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+form .input-group-text i {
+  color: #fff;
+}
+
+form .input-group input,
+form .input-group textarea {
+  font-size: 0.8rem;
+}
+
+form .btn-sent {
+  background-color: var(--active-and-hover-color);
+  border: 1px solid var(--active-and-hover-color);
+}
+
+.contact--info {
+  min-width: 280px;
+  width: 450px;
+  padding: 30px 12px;
+}
+
+.contact--info p {
+  display: flex;
+  align-items: center;
+}
+
+.contact--info p i {
+  font-size: 1.2rem;
+  color: var(--active-and-hover-color);
+  margin-right: 8px;
+}
+
+.contact--info p span a {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #181c32;
+}
+
+.contact--networking .nav-link {
+  color: var(--active-and-hover-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .contact--info {
+    padding: 22px 0 0 60px;
+  }
+}

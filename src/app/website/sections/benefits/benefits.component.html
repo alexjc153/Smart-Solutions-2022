@@ -1,0 +1,17 @@
+<section id="benefits" class="benefits-section">
+  <div class="container">
+    <div class="benefits-section--title">
+      <h2>Creamos un producto sin comparación</h2>
+      <p>Confiable, robusto y diseñado especialmente para ti</p>
+    </div>
+    <div class="benefits--cards-container">
+      <div class="card-details" *ngFor="let card of cardsInfo">
+        <span class="icon-card" [ngClass]="card.iconClass"></span>
+        <p class="card-details--title">{{ card.title }}</p>
+        <p class="card-details--description">
+          {{ card.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

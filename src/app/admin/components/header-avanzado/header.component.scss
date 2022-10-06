@@ -1,0 +1,175 @@
+$admin-header-height: 70px;
+$admin-footer-height: 70px;
+$admin-nav-width: 250px;
+
+.separator {
+  display: block;
+  height: 0;
+  border-bottom: 1px solid #eff2f5;
+}
+
+.dropdown-menu {
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dropdown-menu li {
+  padding: 0.15rem 0;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right .menu-items {
+  flex-direction: row;
+}
+
+.right .menu-items li a {
+  font-weight: 500;
+  color: var(--menu-items-color);
+  font-size: var(--menu-items-font-size);
+  padding: 0.35rem 1rem;
+}
+
+.right .menu-items li a i {
+  font-size: 18px;
+}
+.right .menu-items li a:hover,
+.right .menu-items li a:focus {
+  color: var(--active-and-hover-color);
+  border-radius: 0.475rem;
+}
+
+.right .dropdown-menu {
+  position: absolute;
+  right: 10px;
+  box-shadow: 0px 0px 50px 0px rgb(82 63 105 / 15%) !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.right .dropdown-menu .user {
+  display: flex;
+  align-items: center;
+}
+
+.right .dropdown-menu .user .user--picture {
+  margin-right: 1.25rem;
+}
+
+.right .dropdown-menu .user .user--picture img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.475rem;
+}
+
+.right .dropdown-menu .user .user--info {
+  display: flex;
+  flex-direction: column;
+}
+
+.right .dropdown-menu .user .user--info .user-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.right .dropdown-menu .user .user--info .user-email {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #a1a5b7;
+}
+
+.right .dropdown-menu li .logout {
+  color: red;
+}
+
+.right .dropdown-quick-actions {
+  right: 0px;
+  padding: 0 !important;
+}
+
+.quick-actions {
+  width: 250px;
+  transition: all 0.3s ease-in-out;
+}
+
+.quick-actions .quick-actions--header {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: url("./../../../../assets/img/any/menu-header-bg.jpg");
+  background-repeat: no-repeat;
+  border-top-left-radius: 0.475rem;
+  border-top-right-radius: 0.475rem;
+}
+
+.quick-actions .quick-actions--header h5 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.quick-actions .quick-actions--header span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--active-and-hover-color);
+  border-radius: 0.475rem;
+}
+
+.quick-actions .quick-actions--actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-actions .quick-actions--actions .action a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  border-right: 1px solid #eff2f5;
+  border-bottom: 1px solid #eff2f5;
+}
+
+.quick-actions .quick-actions--actions .action a:hover,
+.quick-actions .quick-actions--actions .action a:focus {
+  border-radius: 0;
+  background-color: #f5f8fa;
+  & i {
+    color: var(--active-and-hover-color);
+  }
+}
+
+.quick-actions .quick-actions--actions .action a {
+  height: 130px;
+}
+
+.quick-actions .quick-actions--actions .action a i {
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.quick-actions .quick-actions--actions .action a span {
+  font-size: 0.85rem;
+}
+
+@media screen and (min-width: 768px) {
+  .right .dropdown-quick-actions {
+    right: 10px;
+  }
+
+  .quick-actions {
+    width: 325px;
+  }
+}

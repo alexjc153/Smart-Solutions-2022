@@ -1,0 +1,53 @@
+<nav id="nav-smart" class="navbar navbar-expand-md fixed-top">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="left">
+        <a
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="offcanvasNavbar"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <a href="" class="navbar-brand">
+          <img itemprop="image"
+            src="./../../../../assets/img/logos/logo-solo-nombre-colores.png"
+            class="logo"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <div class="right">
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="sideMenu"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <img itemprop="image"
+              class="logo"
+              src="./../../../../assets/img/logos/logo-solo-nombre-colores.png"
+              alt="Logo"
+            />
+            <a type="button" data-bs-dismiss="offcanvas" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav navigation">
+              <li class="nav-item" *ngFor="let item of menu">
+                <a class="nav-link" [name]="item.id" [ngClass]="{'active': isSelected}" (click)="scrollToSection(item.id, $event)">{{ item.name }} </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="">Portal de Clientes</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

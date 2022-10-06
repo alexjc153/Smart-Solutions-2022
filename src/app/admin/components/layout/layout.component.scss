@@ -1,0 +1,50 @@
+$admin-header-height: 70px;
+$admin-footer-height: 70px;
+$admin-nav-width: 250px;
+
+.admin {
+  --spacing: 1rem;
+
+  // Flexbox Fallback
+  display: flex;
+  flex-wrap: wrap;
+
+  // Grid
+  display: grid;
+  height: 100vh;
+  display: grid;
+  height: 100vh;
+
+  grid-template-rows: $admin-header-height 1fr;
+  grid-template-columns: $admin-nav-width 1fr;
+  grid-template-areas:
+    "nav header"
+    "nav    main";
+}
+
+.admin--header {
+  display: flex;
+  flex-basis: 100%;
+  grid-area: header;
+  height: $admin-header-height;
+  background-color: #fff;
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  position: relative;
+}
+
+.admin--nav {
+  flex: 0 0 $admin-nav-width;
+  grid-area: nav;
+  background-color: #fff;
+}
+
+.admin--main {
+  flex: 1;
+  grid-area: main;
+  padding: var(--spacing);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: #f4f7fa;
+}
