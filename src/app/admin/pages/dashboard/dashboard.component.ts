@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { dashBoardData } from './dashboard-data';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class DashboardComponent implements OnInit {
   title = 'Dashboard';
+
+  @Output() cardData = dashBoardData;
 
   constructor(private titleService: Title) {
     this.titleService.setTitle(this.title);

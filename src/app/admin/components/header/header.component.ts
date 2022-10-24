@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   @Input() screenWidth = 0;
 
   canShowSearchAsOverlay = false;
+  viewButtonToggle = true;
 
   constructor() {}
 
@@ -26,8 +27,10 @@ export class HeaderComponent implements OnInit {
     let styleClass = '';
     if (this.collapsed && this.screenWidth > 768) {
       styleClass = 'head-trimmed';
+      this.viewButtonToggle = false;
     } else {
       styleClass = 'head-md-screen';
+      this.viewButtonToggle = true;
     }
     return styleClass;
   }
@@ -38,5 +41,9 @@ export class HeaderComponent implements OnInit {
     } else {
       this.canShowSearchAsOverlay = false;
     }
+  }
+
+  toggleCollapse(): void {
+    this.collapsed = !this.collapsed;
   }
 }

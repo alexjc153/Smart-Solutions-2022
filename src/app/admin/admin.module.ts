@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BodyComponent } from './components/body/body.component';
 import { SublevelMenuComponent } from './components/sidenav/sublevel-menu.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SublevelMenuComponent } from './components/sidenav/sublevel-menu.compon
     SidenavComponent,
     BodyComponent,
     SublevelMenuComponent,
+    CardComponent,
   ],
   imports: [CommonModule, AdminRoutingModule],
 })

@@ -1,0 +1,21 @@
+.not-found-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.not-found-container i {
+  font-size: 250px;
+  color: rgb(175, 8, 8);
+}
+
+.not-found-container h1  {
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.not-found-container p  {
+  margin-top: 10px;
+}

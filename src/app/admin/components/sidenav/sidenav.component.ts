@@ -39,6 +39,7 @@ export class SidenavComponent implements OnInit {
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
   screenWidth = 0;
+
   widthLogo = 0;
   navData = navbarData;
   multiple: boolean = false;
@@ -78,17 +79,31 @@ export class SidenavComponent implements OnInit {
     });
   }
 
-  closeSideNav(): void {
-    this.collapsed = false;
-    this.onToggleSideNav.emit({
-      collapsed: this.collapsed,
-      screenWidth: this.screenWidth,
-    });
+  over() {
+    if (this.collapsed == false) {
+      this.collapsed = true;
+      this.onToggleSideNav.emit({
+        collapsed: this.collapsed,
+        screenWidth: this.screenWidth,
+      });
+    }
+  }
+
+  leave() {
+    if (this.screenWidth < 767 && this.collapsed == true) {
+      this.collapsed = false;
+      this.onToggleSideNav.emit({
+        collapsed: this.collapsed,
+        screenWidth: this.screenWidth,
+      });
+    }
   }
 
   handleClick(item: INavbarData): void {
     this.shrinkItems(item);
+    console.log(item.expanded);
     item.expanded = !item.expanded;
+    console.log(item.expanded);
   }
 
   getActiveClass(data: INavbarData): string {

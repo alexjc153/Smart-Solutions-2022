@@ -1,4 +1,4 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''" (mouseover)="over()" (mouseleave)="leave()">
   <div class="logo-container">
     <a class="logo">
       <img
@@ -12,9 +12,6 @@
         alt="Nombre Empresa"
       />
     </div>
-    <!-- <button class="close" *ngIf="collapsed" @rotate (click)="closeSideNav()">
-      <i class="fa-solid fa-xmark"></i>
-    </button> -->
     <div class="button-collapse" (click)="toggleCollapse()">
       <i
         class="fa-solid fa-angles-right"
