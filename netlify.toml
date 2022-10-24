@@ -1,6 +1,6 @@
 [build]
   publish = "dist/smartsolutions2022"
-  command = "npm run build"
+  command = "ng build"
 [[redirects]]
   from = "/*"
   to = "/index.html"
